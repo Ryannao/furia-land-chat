@@ -15,6 +15,12 @@ const config: Config = {
     extend: {
       colors: {
         trueGray: colors.neutral,
+        furiaGray: '#1F1F1F',
+        furiaWhite: '#F5F5F5',
+        furiaRed: '#E10600',
+      },
+      backgroundColor: {
+        furiaBlack: '#0A0A0A',
       },
     },
     fontFamily: {

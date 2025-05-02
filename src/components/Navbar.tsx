@@ -21,26 +21,17 @@ export const Navbar = () => {
           <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
               <span>
                 <Image
-                  src="/img/logo.svg"
-                  width="32"
-                  alt="N"
-                  height="32"
-                  className="w-8"
+                  src="/img/logo.png"
+                  width={32}
+                  alt="furia"
+                  height={32}
                 />
               </span>
-            <span>Nextly</span>
+            <span>FURIA</span>
           </span>
         </Link>
 
         {/* get started  */}
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
-            <ThemeChanger />
-            <div className="hidden mr-3 lg:flex nav__item">
-              <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-                Get Started
-              </Link>
-            </div>
-        </div>
                 
         <Disclosure>
           {({ open }) => (

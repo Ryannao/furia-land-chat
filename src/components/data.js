@@ -48,11 +48,6 @@ const benefitTwo = {
       desc: "This template is powered by latest technologies and tools.",
       icon: <AdjustmentsHorizontalIcon />,
     },
-    {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
-      icon: <SunIcon />,
-    },
   ],
 };
 
