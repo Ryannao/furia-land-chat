@@ -117,7 +117,6 @@ export function PopupWidget() {
 
                 <div className="flex-grow h-full p-6 overflow-auto bg-blue-950">
                   <div className="flex flex-col space-y-3">
-                    
                     {messages.map((message, index) => (
                       <div
                         key={index}
@@ -128,7 +127,11 @@ export function PopupWidget() {
                         }`}
                       >
                         <Linkify
-                          componentDecorator={(href, text, key) => (
+                          componentDecorator={(
+                            href: string,
+                            text: React.ReactNode,
+                            key: number
+                          ) => (
                             <a
                               href={href}
                               key={key}
