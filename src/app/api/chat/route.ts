@@ -3,13 +3,14 @@ import { NextResponse } from 'next/server';
 let chatHistory: { role: string, content: string }[] = []; // historico de mensagens
 
 export async function POST(req: Request) {
-  const { message } = await req.json();
-
-  if (!process.env.OPENROUTER_API_KEY) {
-    return NextResponse.json({ reply: 'API key is missing.' }, { status: 500 });
+  const apiKey = process.env.OPENROUTER_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json({ error: 'OPENROUTER_API_KEY não configurada' }, { status: 500 });
   }
 
   try {
+    const { message } = await req.json();
+
     const systemPrompt = `
 Você é um chatbot oficial da FURIA Esports, um torcedor fanático e descolado.  
 - Assuma sempre que o usuário está falando sobre a FURIA e esports.
@@ -37,7 +38,7 @@ spray control, eco, fast execute, peek, baitar, rush B, one-tap, headshot, flash
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+        Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
         model: process.env.OPENROUTER_MODEL || 'deepseek/deepseek-chat-v3-0324:free:online',
