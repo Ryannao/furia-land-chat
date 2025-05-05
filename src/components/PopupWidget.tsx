@@ -112,11 +112,12 @@ export function PopupWidget() {
               <DisclosurePanel className="relative flex flex-col overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-blue-800 bg-blue-950 shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
                 <div className="flex flex-col items-center justify-center h-32 p-5 bg-blue-900">
                   <h3 className="text-lg text-white">Chat Furioso</h3>
-                  <p className="text-white opacity-75">Manda a call aí, torcedor!</p>
+                  <p className="text-white opacity-75">Manda a call aí, torcedor! 🐾</p>
                 </div>
 
                 <div className="flex-grow h-full p-6 overflow-auto bg-blue-950">
                   <div className="flex flex-col space-y-3">
+                    
                     {messages.map((message, index) => (
                       <div
                         key={index}
